@@ -274,34 +274,46 @@ https://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/
 https://github.com/mission-peace/interview/blob/master/src/com/interview/array/GroupElementsInSizeM.java
 ===============================================================================================================================
 
-89) 
+89) IncreasingTripletSubsequence:-Find if there exists an increasing triplet subsequence.
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/IncreasingTripletSubsequence.java
 ===============================================================================================================================
 
-90) 
+90) K’th Smallest/Largest Element in Unsorted Array
+https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/
 ===============================================================================================================================
 
-91) 
+91) k largest(or smallest) elements in an array | added Min Heap method
+https://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/
 ==============================================================================================================================
 
-92) 
+92) Longest Mountain in Array
+https://leetcode.com/problems/longest-mountain-in-array/description/
 ===============================================================================================================================
 
-93) 
+93) Candy
+https://leetcode.com/problems/candy/
 ===============================================================================================================================
 
-94) 
+94)  Find longest consecutive subsequence in unsorted array.
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/LongestConsecutiveSubsequence.java
 ===============================================================================================================================
 
-95) 
+95) Longest Span with same Sum in two Binary arrays
+https://www.geeksforgeeks.org/longest-span-sum-two-binary-arrays/
 ===============================================================================================================================
 
-96)
+96)Longest Substring with At Most K Distinct Characters
+https://www.programcreek.com/2013/02/longest-substring-which-contains-2-unique-characters/
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/LongestSubstringWithAtMost2Char.java
 ===============================================================================================================================
 
-97)
+97) Create Maximum Number: - Given two arrays of length m and n with digits 0-9 representing two numbers. Create the maximum 
+    number of length k <= m + n from digits of the two. The relative order of the digits from the same array must be preserved.
+    Return an array of the k digits.
+Note: You should try to optimize your time and space complexity.
 ===============================================================================================================================
 
-98)
+98) Find-the-maximum-repeating-number-in-ok-time/
 =============================================================================================================================== 
 
 99) 
@@ -313,7 +325,7 @@ https://github.com/mission-peace/interview/blob/master/src/com/interview/array/G
 101) 
 ===============================================================================================================================
 
-102) 
+102) Maximum Sum of 3 Non-Overlapping Subarrays
 ===============================================================================================================================
 
 103) 
@@ -329,7 +341,25 @@ https://github.com/mission-peace/interview/blob/master/src/com/interview/array/G
 DivideNumbersInEqualGroupWithClosestSum  
 
 forsum
-
+IncreasingSubsequnceOfLength3WithMaxProduct 
 https://github.com/mission-peace/interview/blob/master/src/com/interview/array/GreedyTextJustification.java
+
+KthLargestInTwoSortedArray  --> write 
+
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/LongestIncreasingSubSequenceOlogNMethod.java
+https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
+
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/MaxProductSubarray.java -- > check with 63 number
+https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/  
+https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/MaximumSumThreeNonOverlappingSubarray.java
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/MultiplyAllFieldsExceptOwnPosition.java
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/NthElementOfCountNumberSequence.java
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/RepeatingAndMissingNumber.java
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/SortedArrayTransformation.java
+https://github.com/mission-peace/interview/blob/master/src/com/interview/array/StableMarriageProblem.java
+
+
+
 
 
