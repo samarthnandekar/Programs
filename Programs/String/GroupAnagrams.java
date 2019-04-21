@@ -10,7 +10,7 @@ public class GroupAnagrams {
 	private static void printAnagrams(String arr[]) 
     { 
         HashMap<Integer, List<String> > map = new HashMap<>(); 
-        // loop over all words 
+        // loop over all words. 
         for (int i = 0; i < arr.length; i++) { 
   
             // convert to char array, sort and then re-convert to string 
