@@ -29,11 +29,13 @@ public class _18_PrintAnagramTogether {
     public void print(String[] string){
         Map<String,List<Integer>> invertedIndex = new HashMap<String,List<Integer>>();
         int index = 0;
-        for(String str : string){
+        for(String str : string)
+        {
             char [] charArray = str.toCharArray();
             Arrays.sort(charArray);
             String newString = new String(charArray);
-            if(invertedIndex.containsKey(newString)){
+            if(invertedIndex.containsKey(newString))
+            {
                 List<Integer> pos = invertedIndex.get(newString);
                 pos.add(index);
             }else{
