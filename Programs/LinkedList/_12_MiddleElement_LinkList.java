@@ -34,6 +34,26 @@ public class _12_MiddleElement_LinkList {
 	// Output --> 3 
 	// For even no length gives second middle element 
 	
+	 
+	 static Node getMiddle(Node h) 
+	    { 
+	        // Base case 
+	        if (h == null) 
+	            return h; 
+	        Node fastptr = h.next; 
+	        Node slowptr = h; 
+	  
+	        // Move fastptr by two and slow ptr by one Finally slowptr will point to middle Node 
+	        while (fastptr != null) { 
+	            fastptr = fastptr.next; 
+	            if (fastptr != null) { 
+	                slowptr = slowptr.next; 
+	                fastptr = fastptr.next; 
+	            } 
+	        } 
+	        return slowptr; 
+	    } 
+	 
 	public static void main(String [] args)
 	{
 		
@@ -48,7 +68,15 @@ public class _12_MiddleElement_LinkList {
 		
 		System.out.println(middle(n1));
 		System.out.println(middle_sec(n1));
+		System.out.println(getMiddle(n1).val);
 		
+		Node n5= new Node(5);
+		n4.next=n5;
+		
+	System.out.println("---------------");
+	System.out.println(middle(n1));
+	System.out.println(middle_sec(n1));
+	System.out.println(getMiddle(n1).val);
 	}
 	
 }

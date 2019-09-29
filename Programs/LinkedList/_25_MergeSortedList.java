@@ -1,9 +1,19 @@
 package LinkedList;
 
+/*
+
+Merge Two sorted linked list
+5 ---> 7 ---> 9
+4 ---> 6 ---> 8
+=== after merge ===
+4 ---> 5 ---> 6 ---> 7 ---> 8 ---> 9
+
+
+ */
 public class _25_MergeSortedList {
 	
 	
-	
+	// ********* Using extra space *********
 	static Node mergeList(Node l1, Node l2)
 	{
 		if(l1==null && l2==null)
@@ -20,7 +30,7 @@ public class _25_MergeSortedList {
 		
 		while(l1Pointer!= null && l2Pointer!=null)
 		{
-		 Node next=null;
+		    Node next=null;
 			if(l1Pointer.val<l2Pointer.val)
 			{
 				next=l1Pointer.next;
@@ -58,29 +68,41 @@ public class _25_MergeSortedList {
 			
 		}
 		
-		// add first remaining list to result
-		while(l1Pointer!=null)
+		if(l1Pointer!=null)
 		{
-		   Node next=l1Pointer.next;
-		   pointer.next=l1Pointer;
-		   pointer=l1Pointer;
-		   l1Pointer=next;
+			pointer.next=l1Pointer;
 		}
 		
-		while(l2Pointer!=null)
+		if(l2Pointer!=null)
 		{
-			Node next=l2Pointer.next;
-			   pointer.next=l2Pointer;
-			   pointer=l2Pointer;
-			   l2Pointer=next;
+			pointer.next=l2Pointer;
 		}
-		
-		
-		// add second remaining list to result
-		
-		
 		return result;
+	}
+	
+	
+	// using recursion.
+	Node mergeTwoSortedList(Node a, Node b)
+	{
+		if(a==null)
+			return b;
 		
+		if(b==null)
+			return a;
+		
+		Node result=null;
+		
+		if(a.val <b.val)
+		{
+			result=a;
+			result.next=mergeTwoSortedList(a.next, b);
+		}
+		else
+		{
+		result=b;
+		result.next=mergeTwoSortedList(a, b.next);
+		}
+		return result;
 	}
 	
 	public static void main(String [] args)
@@ -89,9 +111,13 @@ public class _25_MergeSortedList {
 		Node n1= new Node(5);
 		Node n2= new Node(7);
 		Node n3= new Node(9);
+		Node n4= new Node(10);
+		Node n5= new Node(11);
 		
 		n1.next=n2;
 		n2.next=n3;
+		n3.next=n4;
+		n4.next=n5;
 		list.printLinkedList(n1);
 		
 		Node l1= new Node(4);
@@ -105,6 +131,9 @@ public class _25_MergeSortedList {
 		Node result= mergeList(n1,l1);
 		System.out.println("=== after merge ===");
 		list.printLinkedList(result);
+		
+		System.out.println();
+		System.out.println();
 		
 	}
 

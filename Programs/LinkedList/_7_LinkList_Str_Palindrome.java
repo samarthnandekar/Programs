@@ -18,6 +18,21 @@ Follow up:Could you do it in O(n) time and O(1) space?
  */
 public class _7_LinkList_Str_Palindrome 
 {
+	public static void main(String [] args)
+	{
+		
+		
+		_7_LinkList_Str_Palindrome pl= new _7_LinkList_Str_Palindrome();
+		
+		Node node1=pl.createLinkedList();
+		Node node2=pl.createLinkedList();
+		Node node3=pl.createLinkedList();
+		System.out.println(pl.isPalindrome_1(node1));
+		System.out.println(pl.isPalindrome_2(node2));
+		System.out.println(pl.isPalindrome_3(node3));
+		
+	}
+	
 	public boolean isPalindrome_1(Node head) {
 	    if(head == null)
 	        return true;
@@ -90,10 +105,9 @@ public class _7_LinkList_Str_Palindrome
 	    return true;
 	}
 	
-	public class isPalindrome_3 {
-	   Node left;
-	 
-	    public boolean isPalindrome(Node head) {
+
+        static Node left;	 
+	    public boolean isPalindrome_3(Node head) {
 	        left = head;
 	 
 	        boolean result = helper(head);
@@ -119,5 +133,20 @@ public class _7_LinkList_Str_Palindrome
 	 
 	        return y;
 	    }
-	}
+	    
+	    Node createLinkedList()
+	    {
+	    	Node node1= new Node(1);
+			Node node2= new Node(2);
+			Node node3= new Node(3);
+			Node node4= new Node(2);
+			Node node5= new Node(1);
+			
+			node1.next=node2;
+			node2.next=node3;
+			node3.next=node4;
+			node4.next=node5;
+			
+			return node1;
+	    }
 }
