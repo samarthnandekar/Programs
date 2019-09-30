@@ -43,7 +43,7 @@ public class _37_Connect_Nodes_At_SamaLevel {
        
                 // next element in queue represents next  
                 // node at current Level  
-                p.nextRight = q.peek(); 
+                p.right = q.peek(); 
        
                 // push left and right children of current 
                 // node 
@@ -83,16 +83,16 @@ public class _37_Connect_Nodes_At_SamaLevel {
         // Let us check the values of nextRight pointers 
         System.out.println("Following are populated nextRight pointers in \n" + 
       "the tree (-1 is printed if there is no nextRight)"); 
-        System.out.println("nextRight of "+ root.data +" is "+ 
-        ((root.nextRight != null) ? root.nextRight.data : -1)); 
-        System.out.println("nextRight of "+ root.left.data+" is "+ 
-        ((root.left.nextRight != null) ? root.left.nextRight.data : -1)); 
-        System.out.println("nextRight of "+ root.right.data+" is "+ 
-        ((root.right.nextRight != null) ? root.right.nextRight.data : -1)); 
-        System.out.println("nextRight of "+  root.left.left.data+" is "+ 
-        ((root.left.left.nextRight != null) ? root.left.left.nextRight.data : -1)); 
-        System.out.println("nextRight of "+  root.right.right.data+" is "+ 
-        ((root.right.right.nextRight != null) ? root.right.right.nextRight.data : -1)); 
+        System.out.println("nextRight of "+ root.key +" is "+ 
+        ((root.right != null) ? root.right.key : -1)); 
+        System.out.println("nextRight of "+ root.left.key+" is "+ 
+        ((root.left.right != null) ? root.left.right.key : -1)); 
+        System.out.println("nextRight of "+ root.right.key+" is "+ 
+        ((root.right.right != null) ? root.right.right.key : -1)); 
+        System.out.println("nextRight of "+  root.left.left.key+" is "+ 
+        ((root.left.left.right != null) ? root.left.left.right.key : -1)); 
+        System.out.println("nextRight of "+  root.right.right.key+" is "+ 
+        ((root.right.right.right != null) ? root.right.right.right.key : -1)); 
     } 
     
     
