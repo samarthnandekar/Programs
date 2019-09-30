@@ -5,7 +5,7 @@ public class _24_StringPermutationRotation {
 	public static void main(String[] args)
 	{
 
-		String str = "ABC";
+		String str = "CBA";
 		_24_StringPermutationRotation sp = new _24_StringPermutationRotation();
         sp.permute(str.toCharArray(),0);
 	}

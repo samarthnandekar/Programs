@@ -20,7 +20,6 @@ public class _16_PrintAllSubsequence {
         ps.print(input);
         System.out.println("========");
         ps.printAllSubSequences(input);
-
 	}
 
 	public void print(int[] input) {
@@ -42,24 +41,20 @@ public class _16_PrintAllSubsequence {
         if (current == input.length) {
             return;
         }
-
         output[len] = input[current];
         print(input, output, len + 1, current + 1, true);
         print(input, output, len, current + 1, false);
     }
     
-    // Complexity- O(n^3) */ 
-    // Approach 2
+    // Complexity- O(n^3) */           // Approach 2
     static void subArray( int [] arr,int n) 
     { 
-        // Pick starting point 
         for (int i=0; i <n; i++) 
         { 
             // Pick ending point 
             for (int j=i; j<n; j++) 
             { 
-                // Print subarray between current starting 
-                // and ending points 
+                // Print subarray between current starting and ending points 
                 for (int k=i; k<=j; k++) 
                     System.out.print(arr[k]+" "); 
             } 
@@ -77,9 +72,7 @@ public class _16_PrintAllSubsequence {
         { 
             for (int j = 0; j < n; j++) 
             { 
-                /* Check if jth bit in the counter is set 
-                    If set then print jth element from arr[] */
-        
+                /* Check if jth bit in the counter is set If set then print jth element from arr[] */
                 if (BigInteger.valueOf(counter).testBit(j)) 
                     System.out.print(arr[j]+" "); 
             } 

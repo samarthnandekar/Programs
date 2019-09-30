@@ -119,19 +119,19 @@ public class _20_RestoreIPAddresses {
         
         //run for loop 3 times: one IP spot has at most 3 digits
         int end = start + 3;
-        String sb= new String();
+        String ip= new String();
         for (int i = start; i < s.length() && i < end; i++) 
         {
-        	sb=sb.concat(s.charAt(i)+"");
+        	//sb=sb.concat(s.charAt(i)+"");
+        	 ip= s.substring(start, i + 1);
             int remainLength = (s.length() - i - 1);
-            boolean remainValid = remainLength > 0 && remainLength <= (4 - current.size() - 1) * 3;
-        	if (isValid(sb) && remainValid) 
+            boolean remainValid = remainLength >= 0 && remainLength <= (4 - current.size() - 1) * 3;
+        	if (isValid(ip) && remainValid) 
         	{
-        		current.add(sb);
-                restoreIpAddressesUtil(s, i + 1, result, current);
+        		current.add(ip);
+        		restoreIpAddressesUtilImproved(s, i + 1, result, current);
                 current.remove(current.size() - 1);	
         	}
-            
         }
     }
 	

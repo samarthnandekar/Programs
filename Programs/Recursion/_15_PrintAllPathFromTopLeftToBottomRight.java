@@ -35,6 +35,8 @@ public class _15_PrintAllPathFromTopLeftToBottomRight {
         		       {9,10,11,12}};
         int result[] = new int[arr.length + arr[0].length-1];
         pam.print(arr, 0, 0, result,0);
+        System.out.println("-------------");
+        pam.print2(arr, 0, 0, result,0);
     }
 	
 	public void print(int arr[][],int row, int col,int result[],int pos)
@@ -52,5 +54,27 @@ public class _15_PrintAllPathFromTopLeftToBottomRight {
         result[pos] = arr[row][col];
         print(arr,row,col+1,result,pos+1);
         print(arr,row+1,col,result,pos+1);
+    }
+	
+	public void print2(int arr[][],int row, int col,int result[],int pos)
+	{
+        if(row == arr.length-1 && col == arr[0].length-1)
+        {
+            result[pos] = arr[row][col];
+            System.out.println(Arrays.toString(result));
+            return;
+        }
+        if(row >= arr.length || col >= arr[0].length){
+            return;
+        }
+        int []arrx= {0,1};
+        int []arry= {1,0};
+        result[pos] = arr[row][col];
+        for(int i=0;i<arrx.length;i++)
+        {
+        	int newRow=row+arrx[i];
+        	int newCol=col+arry[i];		
+        	print2(arr, newRow, newCol, result, pos+1);
+        }
     }
 }

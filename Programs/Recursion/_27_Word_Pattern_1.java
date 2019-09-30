@@ -61,6 +61,4 @@ public class _27_Word_Pattern_1
 	        }
 	        return false;
 	    }
-
-	    
 }

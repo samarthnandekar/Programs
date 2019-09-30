@@ -52,6 +52,18 @@ The output would be following forest.
 
 public class _18_PrintArrayInCustomizedFormat {
 
+    private TreeNode root; 
+    
+    public _18_PrintArrayInCustomizedFormat(TreeNode root) 
+    { 
+    	this.root = root;  
+    }   
+    
+    _18_PrintArrayInCustomizedFormat()
+    {
+    	
+    }
+    
 	public static void main(String args[]){
         char str[][] = {{'b','d'},
         		        {'a','c'},
@@ -64,25 +76,14 @@ public class _18_PrintArrayInCustomizedFormat {
         String [] links1 = {"b d", 
         		            "a c",
         		            "d a",
-        		            "c f",
-        		            "d f"};
+        		            "c e",
+        		            "d e"};
 
         pac.buildFromLinks(links1);
         printForest(links1);        
 
     }
-    
-    // Approach 1:-
-    public _18_PrintArrayInCustomizedFormat(TreeNode root) 
-    { this.root = root;  }   
-    
-    _18_PrintArrayInCustomizedFormat()
-    {
-    	
-    }
-
-    private TreeNode root; 
-    
+   
     /* Returns an array of trees from links input. Links are assumed to be Strings of the form "<s> <e>" where <s> and <e> are starting 
        and ending points for the link. The returned array is of size 26 and has non-null values at indexes corresponding to roots of trees 
        in output */

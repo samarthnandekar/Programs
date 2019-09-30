@@ -73,9 +73,8 @@ public class _4_Combination {
 
 	    public static void main(String args[]){
 	    	_4_Combination c = new _4_Combination();
-	        //c.combination("aabbc".toCharArray());
-	        c.combinationEasy("aabbc".toCharArray());
+	      //  c.combination("aabbc".toCharArray());
+	        c.combinationEasy("abc".toCharArray());
 
 	    }
-
 }

@@ -14,9 +14,7 @@ public class _23_StringPermutation {
 	public static void main(String[] args) {
 		
 		_23_StringPermutation sp = new _23_StringPermutation();
-        sp.permute("ABC".toCharArray()).forEach(s -> System.out.println(s));
-    
-
+        sp.permute("CBA".toCharArray()).forEach(s -> System.out.println(s));
 	}
 	
 	public List<String> permute(char input[]) {

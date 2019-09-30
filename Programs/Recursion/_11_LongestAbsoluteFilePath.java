@@ -62,10 +62,10 @@ public class _11_LongestAbsoluteFilePath {
 
 	public static void main(String[] args) {
 		
-		String inputStr="dir\\n\\tsubdir1\\n\\tsubdir2\\n\\t\\tfile.ext";
+		String inputStr="dir\n\tsubdir1\n\t\tfilewww.ext\n\tsubdir2";
 		String inputStr2="dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext";
 		_11_LongestAbsoluteFilePath obj= new _11_LongestAbsoluteFilePath();
-		int path=obj.lengthLongestPathIterative(inputStr2);
+		int path=obj.lengthLongestPathIterative(inputStr);
 		System.out.println(path);
 
 	}

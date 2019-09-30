@@ -22,9 +22,7 @@ public boolean matchBracket(char str[],int openCount,int pos){
         if(openCount < 0){
             return false;
         }
-        
         return matchBracket(str,openCount,pos+1);
-        
     }
     
     private void printArray(char result[]){
@@ -68,7 +66,6 @@ public boolean matchBracket(char str[],int openCount,int pos){
             return false;
         }
         return true;
-        
     }
     
     private Character getOpeningCharacter(char ch){
@@ -77,19 +74,16 @@ public boolean matchBracket(char str[],int openCount,int pos){
             case ']' : return '[';
             case '}' : return '{';
             default : return 0;
-        }
-        
+        } 
     }
-
     
     public static void main(String args[]){
         	
         _2_Bracketology matcher = new _2_Bracketology();
         //System.out.print(matcher.matchBracket(")(())(()".toCharArray(), 0, 0));
-        int n=1;
+        int n=2;
         char result[] = new char[n*2];
         matcher.bracketPermutation(result, n, 0, 0, 0);
-        
         //System.out.println(matcher.matchBracket("[({()}{}[])]".toCharArray()));
     }
 }

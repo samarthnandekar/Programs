@@ -80,8 +80,8 @@ public class _21_SetPairTogether {
     }
 
     private void swap(Map<Integer, Integer> index, int input[], int i, int j) {
-        index.compute(input[i], (k, v) -> j);
-        index.compute(input[j], (k, v) -> i);
+//        index.compute(input[i], (k, v) -> j); is it required?
+//        index.compute(input[j], (k, v) -> i);
 
         int t = input[i];
         input[i] = input[j];

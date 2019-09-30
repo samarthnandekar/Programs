@@ -119,6 +119,4 @@ public class _5_CombinationOfSizeK {
 		    ans.forEach(items->System.out.println(items));
 		    return ans; 
 		} 
-    
-   
 }

@@ -62,8 +62,8 @@ public class _13_ExpressionAddOperator
 		printResult(res);
 		System.out.println("**********************");
 		
-		inputStr="00";
-		target=0;
+		inputStr="909";
+		target=18;
 		res= addOperators(inputStr,target);
 		printResult(res);
 		System.out.println("**********************");
@@ -96,6 +96,7 @@ public class _13_ExpressionAddOperator
             //As we need a number between 0 to 9(single digit number only).
             if (curNumString.length() > 1 && curNumString.charAt(0) == '0') 
             {
+            	System.out.println("Inside break loop");
                 break;
             }
             long currNum = Long.parseLong(curNumString);

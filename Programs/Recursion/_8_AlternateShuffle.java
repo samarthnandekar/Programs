@@ -19,11 +19,11 @@ public class _8_AlternateShuffle {
 	
 	public static void main(String args[]) {
 		_8_AlternateShuffle fs = new _8_AlternateShuffle();
-		char result[] = fs.shuffle("bbcdaaaaa".toCharArray());
+		char result[] = fs.shuffle("aaabc".toCharArray());
 		for(char ch : result) { 
 			System.out.print(ch);
 		}
-		
+		System.out.println();
 		System.out.println("*************");
 		rearrangeString("bbcdaaaaa");
 	}
@@ -54,7 +54,7 @@ public class _8_AlternateShuffle {
 			index++;
 		}
 		//assuming char with ASCII value 0 does not exists in the input
-		shuffleUtil(newInput,freq, result, 0, (char)0);
+		shuffleUtilForLoop(newInput,freq, result, 0, (char)0);
 		return result;
 	}
 	
@@ -83,6 +83,28 @@ public class _8_AlternateShuffle {
 		return false;
 	}
 
+	private boolean shuffleUtilForLoop(char input[], int freq[], char result[], int pos, char lastVal) {
+		
+		
+		for(int i=0; i < input.length; i++)
+		{
+			if(lastVal == input[i]) {
+				continue;
+			}
+			if(freq[i] == 0) { 
+				continue;
+			}
+			freq[i]--;
+			result[pos++] = input[i];
+			lastVal=input[i];
+			i=-1;
+		}
+		if(pos == result.length)
+		{
+			return true;
+		}
+		return false;
+	}
 	
 	/*
 	 * https://www.geeksforgeeks.org/rearrange-characters-string-no-two-adjacent/

@@ -80,7 +80,7 @@ public class _19_Reconstruct_Itinerary {
     }
 
     boolean findItineraryUtil(List<Itinerary> input, boolean[] used, String end, List<String> output, int count) {
-        if (count == used.length) {
+        if (count == used.length-1) {
             output.add(end);
             return true;
         }
@@ -201,16 +201,14 @@ private static void printResult(Map<String, String> dataSet)
           } 
     } 
 
-    // If we could not find a starting point, then something wrong 
-    // with input 
+    // If we could not find a starting point, then something wrong with input 
     if (start == null) 
     { 
        System.out.println("Invalid Input"); 
        return; 
     } 
 
-    // Once we have starting point, we simple need to go next, next 
-    // of next using given hash map 
+    // Once we have starting point, we simple need to go next, next of next using given hash map 
     String to = dataSet.get(start); 
     while (to != null) 
     { 

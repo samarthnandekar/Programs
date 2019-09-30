@@ -35,7 +35,8 @@ public class _9_InterpretationsOfArray {
 	
 	        int arr[] = {1,2,1};
 	        _9_InterpretationsOfArray ioa = new _9_InterpretationsOfArray();
-	        ioa.interpret(arr);
+	        //ioa.interpret(arr);
+	        printAllInterpretations(arr);
 	    }
 	
 	public void interpret(int arr[]){
