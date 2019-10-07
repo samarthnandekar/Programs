@@ -61,7 +61,7 @@ public class KthElementInArray {
     public static void main(String args[]){
         int arr[] = {6, 2, 1, 6, 8, 9, 6};
         KthElementInArray kthElement = new KthElementInArray();
-        System.out.print(kthElement.kthElement(arr, arr.length/2));
+        System.out.println(kthElement.kthElement(arr, 1));
         System.out.print(Arrays.toString(arr));
     }
     

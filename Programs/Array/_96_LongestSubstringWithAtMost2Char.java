@@ -12,7 +12,6 @@ import java.util.HashMap;
 
 public class _96_LongestSubstringWithAtMost2Char 
 {
-
 	public int lengthOfLongestSubstringTwoDistinct(String s) {
         int count1 = 0;
         int count2 = 0;
@@ -132,7 +131,6 @@ public class _96_LongestSubstringWithAtMost2Char
             }
      
         }
-     
         return result;
     }
 }

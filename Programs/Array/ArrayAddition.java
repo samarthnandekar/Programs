@@ -42,7 +42,7 @@ public class ArrayAddition {
 public static void main(String args[]){
         
         int arr1[] = {1,0,0,9,9,9,9,9};
-        int arr2[] =     {1,6,8,2,6,7};
+        int arr2[] = {1,6,8,2,6,7};
         ArrayAddition aa = new ArrayAddition();
         int result[] = aa.add(arr1, arr2);
         for(int i=0; i < result.length; i++){
