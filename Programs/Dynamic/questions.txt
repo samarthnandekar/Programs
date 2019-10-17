@@ -176,6 +176,7 @@ Input:
 Output: 6
 
 https://www.youtube.com/watch?v=g8bSdXCG-lA
+https://leetcode.com/problems/maximal-rectangle/
 =========================================================================================================================================
 
 27) Egg Dropping Puzzle

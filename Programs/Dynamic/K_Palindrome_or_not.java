@@ -1,4 +1,4 @@
-package Dynamic.Dynamic;
+package Dynamic;
 
 /*
 Find if string is K-Palindrome or not | Set 1

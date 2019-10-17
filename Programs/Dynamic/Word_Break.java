@@ -1,7 +1,8 @@
-package Dynamic.Dynamic;
+package Dynamic;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -25,6 +26,9 @@ Input:  ilikesamsung
 Output: Yes
 The string can be segmented as "i like samsung" 
 or "i like sam sung".
+
+
+https://www.programcreek.com/2012/12/leetcode-solution-word-break/
  */
 
 public class Word_Break {
@@ -66,6 +70,17 @@ public class Word_Break {
        // String result1 = bmw.breakWordDP(str, dictionary);
         
        // System.out.print(bmw.wordBreakBottomUp(str,dictionary));
+        System.out.println("=============================");
+        Set<String> dictionary1 = new HashSet<String>();
+        dictionary1.add("cat");
+        dictionary1.add("cats");
+        dictionary1.add("and");
+        dictionary1.add("sand");
+        dictionary1.add("dog");
+        String str1="catsanddog";
+        
+        List<String> strlist=bmw.wordBreakTopDown(str1,dictionary1);
+        strlist.forEach(item->System.out.println(item));
     }
 	
 	 /**
@@ -167,6 +182,32 @@ public class Word_Break {
         return words;
     }
 	
+    /*
+    In Solution 2, if the size of the dictionary is very large, the time is bad. Instead we can solve the problem in O(n^2) time
+     (n is the length of the string).
+    */
+    public boolean wordBreak(String s, Set<String> wordDict) {
+        int[] pos = new int[s.length()+1];
+     
+        Arrays.fill(pos, -1);
+     
+        pos[0]=0;
+     
+        for(int i=0; i<s.length(); i++){
+            if(pos[i]!=-1){
+                for(int j=i+1; j<=s.length(); j++)
+                {
+                    String sub = s.substring(i, j);
+                    if(wordDict.contains(sub))
+                    {
+                        pos[j]=i;
+                    }
+                } 
+            }
+        }
+     
+        return pos[s.length()]!=-1;
+    }
 }
 
 
