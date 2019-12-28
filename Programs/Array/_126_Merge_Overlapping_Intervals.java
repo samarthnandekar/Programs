@@ -15,6 +15,8 @@ For example, let the given set of intervals be {{1,3}, {2,4}, {5,7}, {6,8} }. Th
  so they should be merged and become {1, 4}. Similarly {5, 7} and {6, 8} should be merged and become {5, 8}
 
 * https://leetcode.com/problems/merge-intervals/
+
+56. Merge Intervals
 Given a collection of intervals, merge all overlapping intervals.
 
 Example 1:
@@ -33,6 +35,7 @@ Asked in :Amazon, Google
  */
 
 
+	
 /*
  Method 1:- A simple approach is to start from the first interval and compare it with all other intervals for overlapping, if it overlaps with
             any other interval, then remove the other interval from list and merge the other into the first interval. Repeat the same steps for

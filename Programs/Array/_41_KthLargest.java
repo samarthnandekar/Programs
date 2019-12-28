@@ -8,6 +8,11 @@ public class _41_KthLargest {
 		int arr[] = {12, 3, 5, 7, 4, 19, 26}; 
         int n = arr.length, k = 4; 
         System.out.println("K'th smallest element is " + kthSmallest(arr, 0, n - 1, k)); 
+        
+        int arr1[] = {6, 2, 1, 6, 8, 9, 6};
+        n = arr.length;
+        k = 2; 
+        System.out.println("K'th smallest element is " + kthSmallest(arr1, 0, n - 1, k)); 
 	}
 	
 	// This function returns k'th smallest element in arr[l..r] using 
