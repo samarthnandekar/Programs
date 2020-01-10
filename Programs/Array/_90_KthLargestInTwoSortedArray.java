@@ -88,8 +88,7 @@ public class _90_KthLargestInTwoSortedArray {
                 }
             }
         }
-        
-    
+            
         int m1 = (h1 + l1)/2;
         int m2 = (h2 + l2)/2;
         
@@ -114,13 +113,8 @@ public class _90_KthLargestInTwoSortedArray {
     	_90_KthLargestInTwoSortedArray kis = new _90_KthLargestInTwoSortedArray();
         int input1[] = {1,4,7,11,17,21};
         int input2[] = {-4,-1,3,4,6,28,35,41,56,70};
-        /*
-        for(int i = 0; i < input1.length + input2.length; i++){
-            System.out.println(kis.kthLargest(input1, input2, i+1));
-        } */
         
-       System.out.println(kis.kthLargest(input1, input2, 6));
-       
+       System.out.println(kis.kthLargest(input1, input2, 6));       
        System.out.println(kis.kthLargest1(input1, input2,0,input1.length-1,0,input2.length-1, 6));
     }
     
@@ -137,8 +131,7 @@ public class _90_KthLargestInTwoSortedArray {
         if(k == 0){
             return Math.min(arr1[low1], arr2[low2]);
         }
-        
-     
+             
         int mid1 = len1*k/(len1 + len2);
         int mid2 = k - mid1 - 1;
         
