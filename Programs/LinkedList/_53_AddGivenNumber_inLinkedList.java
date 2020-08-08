@@ -7,34 +7,38 @@ import java.util.Stack;
 
 /*
 
-Given a non-negative integer represented as non-empty a singly linked list of digits, plus one to the integer.
+Given a non-negative integer represented as non-empty a singly linked list of digits, add given to the last node.
 You may assume the integer do not contain any leading zero, except the number 0 itself.
 The digits are stored such that the most significant digit is at the head of the list.
 
 Example:
 
-Input: 1->2->3
-Output: 1->2->4
+Input:  1-> 2-> 3 , n= 7
+Output: 1-> 3-> 0
 
-Input 9 ---> 9 ---> 9 ---> 9
-output:- 1 ---> 0 ---> 0 ---> 0 ---> 0
+Input    9 ---> 9 ---> 9 ---> 9  , n=7
+output:- 1 ---> 0 ---> 0 ---> 0 ---> 6
+
+Input    9 ---> 9 ---> 9 ---> 9  , n=30
+output:- 1 ---> 0 ---> 0 ---> 2 ---> 9
+
  */
-public class _35_AddOne_inLinkedList {
+public class _53_AddGivenNumber_inLinkedList {
 
-	static int addWithCarry(Node head)
+	static int addWithCarry(Node head, int num)
 	{
 		if(head==null)
-			return 1;
+			return num;
 		
-		int res=head.val+addWithCarry(head.next);
+		int res=head.val+addWithCarry(head.next, num);
 		
 		head.val=res%10;
 		return res/10;
 	}
 	
-	static Node addOne(Node head)
+	static Node addGivenNumber(Node head, int num)
 	{
-		int carry= addWithCarry(head);
+		int carry= addWithCarry(head, num);
 		
 		if(carry>0)
 		{
@@ -45,7 +49,7 @@ public class _35_AddOne_inLinkedList {
 		return head;
 	}
 	
-	public static Node plusOne(Node head) {
+	public static Node plusGivenNumber(Node head, int num) {
 		
 		if(head==null)
 			return null;
@@ -56,26 +60,22 @@ public class _35_AddOne_inLinkedList {
             stack.push(node);
             node = node.next;
         }      
-        int carry = 0;       
+           
         Node finalNode=null;
         
-        // if last node value is not 9 then add one in last node and return head
-        if(stack.peek().val != 9) {
-            stack.peek().val++;
-            return head;
-        } else {
-        	// if it will come here means last node value is 9. 
-        	stack.pop().val = 0;
-            carry = 1;
-            while(!stack.isEmpty()) {
-                if(stack.peek().val != 9) {
-                    stack.peek().val++;
-                    return head;
-                } else {
-                    stack.pop().val = 0;
-                }
-            }          
-        }        
+        int carry=0;
+  
+        int currVal=stack.peek().val;
+    	int sum=currVal+num;
+    	stack.pop().val=sum%10;
+    	carry=sum/10;
+    	
+        while(!stack.isEmpty()) {
+        	currVal=stack.peek().val;
+        	sum=currVal+carry;
+        	stack.pop().val=sum%10;
+        	carry=sum/10;
+        }  
         finalNode= new Node(carry);
         finalNode.next=head;
         return finalNode;
@@ -93,11 +93,12 @@ public class _35_AddOne_inLinkedList {
 	  
 		_1_LinkedList list= new _1_LinkedList();
 		list.printLinkedList(n1);
+		int num=30;
 		
-		Node addOne = addOne(n1);
+		Node addOne = addGivenNumber(n1,num);
 		list.printLinkedList(addOne);
 		
-		Node finalNode=plusOne(addOne);
+		Node finalNode=plusGivenNumber(n1, num);
 		list.printLinkedList(finalNode);
 	 
 	}
