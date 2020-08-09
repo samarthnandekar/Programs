@@ -1,7 +1,6 @@
 package Tree;
 
 /*
-
 Lowest Common Ancestor of a Binary Search Tree
 
 Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
@@ -31,7 +30,7 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
 Note:- All of the nodes' values will be unique. p and q are different and both values will exist in the BST.
 
 Link:- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
-
+236. Lowest Common Ancestor of a Binary Tree
  */
 
 
