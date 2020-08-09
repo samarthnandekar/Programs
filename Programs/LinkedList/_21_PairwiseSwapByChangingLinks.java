@@ -8,7 +8,7 @@ Given a singly linked list, write a function to swap elements pairwise. For exam
 then the function should change it to 2->1->4->3->6->5->7, and if the linked list is 1->2->3->4->5->6 then the function should
 change it to 2->1->4->3->6->5
 
-
+You may not modify the values in the list, only nodes itself can be changed.
  */
 public class _21_PairwiseSwapByChangingLinks {
 	
