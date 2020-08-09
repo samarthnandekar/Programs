@@ -95,9 +95,8 @@ public class TopologicalSort {
 	        // Mark all the vertices as not visited 
 	        boolean visited[] = new boolean[V];
 	  
-	        // Call the recursive helper function to store 
-	        // Topological Sort starting from all vertices one by one 
-	        for (int i = 0; i < V; i++) 
+	        // Call the recursive helper function to store Topological Sort starting from all vertices one by one 
+	        for (int i = 5; i >=0; i--) 
 	            if (visited[i] == false) 
 	                topologicalSortUtil(i, visited, stack); 
 	  
