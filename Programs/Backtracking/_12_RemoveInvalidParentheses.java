@@ -36,6 +36,7 @@ public class _12_RemoveInvalidParentheses {
 	public static void main(String[] args) {
 		String input1=")(";
 		String input2="(a)())()";
+		String input3="(r(()()(";
 		//removeInvalidParenthesis(input1);
 		removeInvalidParenthesis(input2);
 		
