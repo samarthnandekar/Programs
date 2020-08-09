@@ -1,4 +1,4 @@
-package DFS;
+package BFS;
 
 //https://www.geeksforgeeks.org/bipartite-graph/
 public class Graph_Is_Bipartite_or_not {

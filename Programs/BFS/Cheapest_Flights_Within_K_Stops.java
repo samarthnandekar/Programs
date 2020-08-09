@@ -1,4 +1,4 @@
-package DFS;
+package BFS;
 
 /*
  https://leetcode.com/problems/cheapest-flights-within-k-stops/description/

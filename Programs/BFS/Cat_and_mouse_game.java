@@ -1,4 +1,4 @@
-package DFS;
+package BFS;
 
 //https://leetcode.com/articles/cat-and-mouse-game/
 // https://leetcode.com/problems/cat-and-mouse/

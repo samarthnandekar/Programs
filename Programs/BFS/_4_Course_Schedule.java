@@ -19,11 +19,9 @@ import java.util.LinkedList;
 	The input prerequisites is a graph represented by a list of edges, not adjacency matrices. Read more about how a graph is represented.
 	You may assume that there are no duplicate edges in the input prerequisites.
 	
-	******  https://www.youtube.com/watch?v=VvKwqfXri0I   ****** check there are links with videos
-	
-	
- */
-public class Course_Schedule {
+	******  https://www.youtube.com/watch?v=VvKwqfXri0I   ****** check there are links with videos */
+
+public class _4_Course_Schedule {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -46,7 +44,6 @@ public class Course_Schedule {
 	    }
 	 
 	    int len = prerequisites.length;
-	 
 	    if(numCourses == 0 || len == 0){
 	        return true;
 	    }
@@ -64,7 +61,7 @@ public class Course_Schedule {
 	            queue.add(i);
 	        }
 	    }
-	 
+	    
 	    // number of courses that have no prerequisites
 	    int numNoPre = queue.size();
 	 
@@ -81,21 +78,16 @@ public class Course_Schedule {
 	            }
 	        }
 	    }
-	 
 	    return numNoPre == numCourses;
 	}
 	
-	/*
-	 * Java Solution 2 - DFS
-	 */
-
+	/*    Java Solution 2 - DFS   */
 	static public boolean canFinish_dfs(int numCourses, int[][] prerequisites) {
 	    if(prerequisites == null){
 	        throw new IllegalArgumentException("illegal prerequisites array");
 	    }
 	 
 	    int len = prerequisites.length;
-	 
 	    if(numCourses == 0 || len == 0){
 	        return true;
 	    }
@@ -119,7 +111,6 @@ public class Course_Schedule {
 	        if(!canFinishDFS(map, visit, i))
 	            return false;
 	    }
-	 
 	    return true;
 	}
 	 
@@ -136,9 +127,7 @@ public class Course_Schedule {
 	                return false;
 	        }
 	    }
-	 
 	    visit[i]=1;
-	 
 	    return true;
 	}
 }

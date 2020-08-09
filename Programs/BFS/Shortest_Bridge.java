@@ -1,4 +1,4 @@
-package DFS;
+package BFS;
 
 //https://leetcode.com/articles/shortest-bridge/
 //https://leetcode.com/problems/shortest-bridge/description/

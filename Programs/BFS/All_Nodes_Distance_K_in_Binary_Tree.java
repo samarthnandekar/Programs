@@ -1,4 +1,4 @@
-package DFS;
+package BFS;
 
 //https://github.com/cherryljr/LeetCode/blob/master/All%20Nodes%20Distance%20K%20in%20Binary%20Tree.java
 //https://leetcode.com/articles/all-nodes-distance-k-in-binary-tree/

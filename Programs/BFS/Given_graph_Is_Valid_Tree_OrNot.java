@@ -1,4 +1,4 @@
-package DFS;
+package BFS;
 
 /*
 https://www.geeksforgeeks.org/check-given-graph-tree/

@@ -1,8 +1,8 @@
-package DFS;
+package BFS;
 
 import java.util.LinkedList;
 
-public class Surrounded_Region {
+public class _2_Surrounded_Region {
 
 	
 	public static void main(String args[])
