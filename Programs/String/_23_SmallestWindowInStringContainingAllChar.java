@@ -22,6 +22,18 @@ Explanation: “t stri” contains all the characters of pattern.
 Input: string = “geeksforgeeks”, pattern = “ork”
 Output: Minimum window is “ksfor”
 
+76. Minimum Window Substring
+
+Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+
+Example:
+
+Input: S = "ADOBECODEBANC", T = "ABC"
+Output: "BANC"
+Note:
+
+If there is no such window in S that covers all characters in T, return the empty string "".
+If there is such window, you are guaranteed that there will always be only one unique minimum window in S.
 */
 
 
@@ -51,13 +63,12 @@ public class _23_SmallestWindowInStringContainingAllChar {
         _23_SmallestWindowInStringContainingAllChar swcac = new _23_SmallestWindowInStringContainingAllChar();
         String result = swcac.minWindow(str, subString);
         System.out.println(result);
-
 	}
 	
-	public String minWindow(String s, String t)
+	public String minWindow(String s, String subStr)
 	{
 		 int len1 = s.length(); 
-	        int len2 = t.length(); 
+	        int len2 = subStr.length(); 
 	      
 	        // check if string's length is less than pattern's length. If yes then no such window can exist 
 	        if (len1 < len2) 
@@ -67,7 +78,7 @@ public class _23_SmallestWindowInStringContainingAllChar {
 	        } 
 	        
         Map<Character, Integer> countMap = new HashMap<>();
-        for (char ch : t.toCharArray()) 
+        for (char ch : subStr.toCharArray()) 
         {
             Integer val = countMap.get(ch);
             if (val == null) {
@@ -77,7 +88,7 @@ public class _23_SmallestWindowInStringContainingAllChar {
         }
         
         int start = 0;
-        int currLen = t.length();
+        int currLen = subStr.length();
         int minWindow = Integer.MAX_VALUE;
         int minStart = 0;
         int i = 0;

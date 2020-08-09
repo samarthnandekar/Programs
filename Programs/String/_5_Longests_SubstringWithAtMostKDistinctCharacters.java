@@ -22,8 +22,8 @@ Method 1 (Brute Force) :- If the length of string is n, then there can be n*(n+1
                          it would take O(n2) to generate all substrings and O(n) to do a check on each one. Thus overall it would go O(n3).
 
 
-Method 2:- We can further improve this solution by creating a hash table and while generating the substrings, check the number of unique characters 
-           using that hash table. Thus it would improve up to O(n2).
+Method 2:- We can further improve this solution by creating a hash table and while generating the substrings, check the number of unique
+           characters using that hash table. Thus it would improve up to O(n2).
 
 Method 3:-
  * Time complexity O(n)

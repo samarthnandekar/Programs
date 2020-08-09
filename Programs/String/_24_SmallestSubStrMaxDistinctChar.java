@@ -22,6 +22,10 @@ Explanation : Sub-string -> "GEEKSFOR"
 
 asked : Amazon
 
+**** it is similar to previous question,question no 23 *****
+1) create string from all distinct char present in string.
+2) Same as question no 23.
+
  */
 public class _24_SmallestSubStrMaxDistinctChar {
 

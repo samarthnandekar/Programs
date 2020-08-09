@@ -47,7 +47,7 @@ public class _4_LongestPalindromeSubstring {
 
 	public static void main(String args[]) {
 		_4_LongestPalindromeSubstring lps = new _4_LongestPalindromeSubstring();
-        System.out.println(lps.longestPalindromicSubstringLinear("abba".toCharArray()));
+        System.out.println(lps.longestPalindromeSubstringEasy("abba".toCharArray()));
         System.out.println(lps.longestPalindromicSubstringLinear("abbababba".toCharArray()));
         System.out.println(lps.longestPalindromicSubstringLinear("babcbaabcbaccba".toCharArray()));
         System.out.println(lps.longestPalindromicSubstringLinear("cdbabcbabdab".toCharArray()));
@@ -100,6 +100,7 @@ public class _4_LongestPalindromeSubstring {
 
             int x, y;
             int palindrome;
+            // even length
             x = i;
             y = i + 1;
             palindrome = 0;
@@ -110,6 +111,7 @@ public class _4_LongestPalindromeSubstring {
             }
             longest_substring = Math.max(longest_substring, palindrome);
             
+            // odd length
             x = i - 1;
             y = i + 1;
             palindrome = 1;
