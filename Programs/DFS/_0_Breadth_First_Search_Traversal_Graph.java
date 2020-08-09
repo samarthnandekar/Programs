@@ -36,8 +36,7 @@ public class _0_Breadth_First_Search_Traversal_Graph
     // prints BFS traversal from a given source s 
     void BFS(int s) 
     { 
-        // Mark all the vertices as not visited(By default 
-        // set as false) 
+        // Mark all the vertices as not visited(By default set as false) 
         boolean visited[] = new boolean[V]; 
   
         // Create a queue for BFS 
@@ -53,9 +52,8 @@ public class _0_Breadth_First_Search_Traversal_Graph
             s = queue.poll(); 
             System.out.print(s+" "); 
   
-            // Get all adjacent vertices of the dequeued vertex s 
-            // If a adjacent has not been visited, then mark it 
-            // visited and enqueue it 
+            // Get all adjacent vertices of the dequeued vertexs If a adjacent 
+            // has not been visited, then mark it visited and enqueue it 
             Iterator<Integer> i = adj[s].listIterator(); 
             while (i.hasNext()) 
             { 

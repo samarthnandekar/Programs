@@ -41,8 +41,7 @@ public class _2_Snake_and_Ladder_Problem {
             qe = q.remove(); 
             int v = qe.v; 
   
-            // If front vertex is the destination  
-            // vertex, we are done 
+            // If front vertex is the destination vertex, we are done 
             if (v == n - 1) 
                 break; 
   
@@ -71,7 +70,6 @@ public class _2_Snake_and_Ladder_Problem {
                 } 
             } 
         } 
-  
         // We reach here when 'qe' has last vertex 
         // return the distance of vertex in 'qe' 
         return qe.dist; 
@@ -97,8 +95,7 @@ public class _2_Snake_and_Ladder_Problem {
         moves[16] = 3; 
         moves[18] = 6; 
   
-        System.out.println("Min Dice throws required is " +  
-                          getMinDiceThrows(moves, N)); 
+        System.out.println("Min Dice throws required is " +   getMinDiceThrows(moves, N)); 
     } 
 }
 

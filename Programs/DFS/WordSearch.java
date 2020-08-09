@@ -11,6 +11,9 @@ For example, given board =
   ["SFCS"],
   ["ADEE"]
 ]
+
+ABCC
+
 word = "ABCCED", -> returns true,
 word = "SEE", -> returns true,
 word = "ABCB", -> returns false.
