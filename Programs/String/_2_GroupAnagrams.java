@@ -6,6 +6,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+ 
+ https://leetcode.com/problems/group-anagrams/
+ 
+ 49. Group Anagrams
+ 
+ Given an array of strings, group anagrams together.
+
+Example:
+
+Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
+Output:
+[["ate","eat","tea"],
+  ["nat","tan"],
+  ["bat"]]
+ 
+ 
+ */
 public class _2_GroupAnagrams {
 
 	private static void printAnagrams(String arr[]) 
