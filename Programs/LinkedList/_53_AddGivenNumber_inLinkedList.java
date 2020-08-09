@@ -25,82 +25,78 @@ output:- 1 ---> 0 ---> 0 ---> 2 ---> 9
  */
 public class _53_AddGivenNumber_inLinkedList {
 
-	static int addWithCarry(Node head, int num)
-	{
-		if(head==null)
+	static int addWithCarry(Node head, int num) {
+		if (head == null)
 			return num;
-		
-		int res=head.val+addWithCarry(head.next, num);
-		
-		head.val=res%10;
-		return res/10;
+
+		int res = head.val + addWithCarry(head.next, num);
+
+		head.val = res % 10;
+		return res / 10;
 	}
-	
-	static Node addGivenNumber(Node head, int num)
-	{
-		int carry= addWithCarry(head, num);
-		
-		if(carry>0)
-		{
-			Node newNode= new Node(carry);
-			newNode.next=head;
-			head=newNode;
+
+	static Node addGivenNumber(Node head, int num) {
+		int carry = addWithCarry(head, num);
+
+		if (carry > 0) {
+			Node newNode = new Node(carry);
+			newNode.next = head;
+			head = newNode;
 		}
 		return head;
 	}
-	
+
 	public static Node plusGivenNumber(Node head, int num) {
-		
-		if(head==null)
+
+		if (head == null)
 			return null;
-					
-        Stack<Node> stack = new Stack<Node>();
-        Node node = head;
-        while(node != null) {
-            stack.push(node);
-            node = node.next;
-        }      
-           
-        Node finalNode=null;
-        
-        int carry=0;
-  
-        int currVal=stack.peek().val;
-    	int sum=currVal+num;
-    	stack.pop().val=sum%10;
-    	carry=sum/10;
-    	
-        while(!stack.isEmpty()) {
-        	currVal=stack.peek().val;
-        	sum=currVal+carry;
-        	stack.pop().val=sum%10;
-        	carry=sum/10;
-        }  
-        finalNode= new Node(carry);
-        finalNode.next=head;
-        return finalNode;
-    }
-	
-	public static void main(String [] args)
-	{
-	  Node n1= new Node(9);
-	  Node n2= new Node(9);
-	  n1.next=n2;
-	  Node n3= new Node(9);
-	  n2.next=n3;
-	  Node n4= new Node(9);
-	  n3.next=n4;
-	  
-		_1_LinkedList list= new _1_LinkedList();
-		list.printLinkedList(n1);
-		int num=30;
-		
-		Node addOne = addGivenNumber(n1,num);
-		list.printLinkedList(addOne);
-		
-		Node finalNode=plusGivenNumber(n1, num);
-		list.printLinkedList(finalNode);
-	 
+
+		Stack<Node> stack = new Stack<Node>();
+		Node node = head;
+		while (node != null) {
+			stack.push(node);
+			node = node.next;
+		}
+
+		Node finalNode = null;
+
+		int carry = 0;
+
+		int currVal = stack.peek().val;
+		int sum = currVal + num;
+		stack.pop().val = sum % 10;
+		carry = sum / 10;
+
+		while (!stack.isEmpty()) {
+			currVal = stack.peek().val;
+			sum = currVal + carry;
+			stack.pop().val = sum % 10;
+			carry = sum / 10;
+		}
+		finalNode = new Node(carry);
+		finalNode.next = head;
+		return finalNode;
 	}
-	
+
+	public static void main(String[] args) {
+		Node n1 = new Node(9);
+		Node n2 = new Node(9);
+		n1.next = n2;
+		Node n3 = new Node(9);
+		n2.next = n3;
+		Node n4 = new Node(9);
+		n3.next = n4;
+
+		_1_LinkedList list = new _1_LinkedList();
+		list.printLinkedList(n1);
+		int num = 30;
+
+		Node addOne = addGivenNumber(n1, num);
+		list.printLinkedList(addOne);
+
+		Node finalNode = plusGivenNumber(n1, num);
+		list.printLinkedList(finalNode);
+
+	}
+
 }
